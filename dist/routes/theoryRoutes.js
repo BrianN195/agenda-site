@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const theoryController_js_1 = require("../controllers/theoryController.js");
+const router = (0, express_1.Router)();
+router.get("/", theoryController_js_1.getTheoriesController);
+router.get("/:id", theoryController_js_1.getTheoryByIdController);
+router.post("/", theoryController_js_1.createTheoryController);
+router.patch("/:id/status", theoryController_js_1.updateTheoryStatusController);
+exports.default = router;
